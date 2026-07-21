@@ -3,7 +3,7 @@
 Bem-vindo ao repositório do Komorebi, uma vitrine curada de produtos artesanais sob encomenda e achadinhos selecionados.
 
 ## 🔗 Acesse o site
-https://letpenguincook.github.io/komorebi/
+[https://letpenguincook.github.io/komorebi/](https://letpenguincook.github.io/komorebi/)
 
 ## 📝 Sobre o projeto
 O Komorebi é um ecossistema focado em curadoria de itens de nicho (animes, fandoms, cultura pop). A plataforma combina itens de fabricação própria com recomendações de produtos na Shopee, proporcionando uma experiência de navegação otimizada para o usuário.
