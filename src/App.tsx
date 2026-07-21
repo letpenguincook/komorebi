@@ -8,12 +8,13 @@ import { Footer } from './components/Footer';
 import { PaginaUniverso } from './components/PaginaUniverso';
 import { PaginaBusca } from './components/PaginaBusca';
 import { ApresentacaoKomorebi } from './components/ApresentacaoKomorebi';
+import { FAQ } from './components/faq';
 
 const ConteudoApp: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white text-[#334155] font-sans antialiased min-h-screen flex flex-col selection:bg-[#0284C7]/10 selection:text-[#0284C7]">
+  <div className="bg-white dark:bg-slate-950 text-[#334155] dark:text-slate-200 font-sans antialiased min-h-screen flex flex-col selection:bg-[#0284C7]/10 selection:text-[#0284C7]">
       <Header />
 
       <main className="flex-grow pb-16 md:pb-28">
@@ -24,6 +25,7 @@ const ConteudoApp: React.FC = () => {
               <Hero />
               <ApresentacaoKomorebi />
               <ExploracaoGuiada onSelecionarUniverso={(id) => navigate(`/${id}`)} />
+                <FAQ />
             </div>
           } />
 

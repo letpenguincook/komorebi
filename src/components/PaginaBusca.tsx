@@ -61,25 +61,25 @@ export const PaginaBusca: React.FC<PaginaBuscaProps> = ({ produtos }) => {
     <div className="max-w-6xl mx-auto px-6 pt-6 pb-20 space-y-8">
       <button
         onClick={() => navigate('/')}
-        className="text-xs font-mono font-bold text-slate-400 hover:text-slate-900 transition-colors flex items-center gap-2 group"
+        className="text-xs font-mono font-bold text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-2 group"
       >
         <i className="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
         Voltar para a Home
       </button>
 
-      <div className="space-y-4 pb-6 border-b border-slate-100">
+      <div className="space-y-4 pb-6 border-b border-slate-100 dark:border-slate-800">
         <div className="space-y-1">
-          <p className="text-sm font-mono font-black text-slate-900 uppercase tracking-wide">
+          <p className="text-sm font-mono font-black text-slate-900 dark:text-slate-200 uppercase tracking-wide">
             Procurando em k/
           </p>
-          <h2 className="text-xl font-black text-slate-950 tracking-tight font-mono">
-            <span className="text-sky-600">"{queryParam}"</span>
+          <h2 className="text-xl font-black text-slate-950 dark:text-white tracking-tight font-mono">
+            <span className="text-sky-600 dark:text-sky-400">"{queryParam}"</span>
           </h2>
         </div>
 
         {totalProdutos > 0 && universosSugeridos.length > 0 && (
           <div className="flex flex-wrap items-center gap-2 text-xs pt-1">
-            <span className="font-mono text-slate-400 font-bold uppercase tracking-wider text-[10px]">
+            <span className="font-mono text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider text-[10px]">
               Hubs sugeridos:
             </span>
             <div className="flex flex-wrap gap-x-3 gap-y-1">
@@ -87,7 +87,7 @@ export const PaginaBusca: React.FC<PaginaBuscaProps> = ({ produtos }) => {
                 <button
                   key={univ}
                   onClick={() => navigate(`/${univ}`)}
-                  className="font-mono text-slate-400 hover:text-sky-600 font-bold transition-colors text-[11px]"
+                  className="font-mono text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 font-bold transition-colors text-[11px]"
                 >
                   k/{univ}
                 </button>
@@ -105,9 +105,9 @@ export const PaginaBusca: React.FC<PaginaBuscaProps> = ({ produtos }) => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4 pt-8 border-t border-slate-100 font-mono text-center">
-            <p className="text-xs text-slate-500">
-              Exibindo <span className="font-bold text-slate-800">{totalProdutos <= ITENS_POR_PAGINA ? totalProdutos : `${indexInicial + 1}-${indexFinal}`}</span> de <span className="font-bold text-slate-800">{totalProdutos}</span> mimos correspondentes
+          <div className="flex flex-col items-center justify-center gap-4 pt-8 border-t border-slate-100 dark:border-slate-800 font-mono text-center">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Exibindo <span className="font-bold text-slate-800 dark:text-slate-200">{totalProdutos <= ITENS_POR_PAGINA ? totalProdutos : `${indexInicial + 1}-${indexFinal}`}</span> de <span className="font-bold text-slate-800 dark:text-slate-200">{totalProdutos}</span> mimos correspondentes
             </p>
 
             {totalPaginas > 1 && (
@@ -115,19 +115,19 @@ export const PaginaBusca: React.FC<PaginaBuscaProps> = ({ produtos }) => {
                 <button
                   disabled={paginaAtual === 1}
                   onClick={() => setPaginaAtual(prev => prev - 1)}
-                  className="p-2 text-xs font-bold rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:hover:bg-white transition-colors"
+                  className="p-2 text-xs font-bold rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-20 transition-colors"
                 >
                   <i className="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <span className="text-xs text-slate-500 min-w-[80px]">
-                  Pág. <span className="font-bold text-slate-800">{paginaAtual}</span> de {totalPaginas}
+                <span className="text-xs text-slate-500 dark:text-slate-400 min-w-[80px]">
+                  Pág. <span className="font-bold text-slate-800 dark:text-slate-200">{paginaAtual}</span> de {totalPaginas}
                 </span>
 
                 <button
                   disabled={paginaAtual === totalPaginas}
                   onClick={() => setPaginaAtual(prev => prev + 1)}
-                  className="p-2 text-xs font-bold rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:hover:bg-white transition-colors"
+                  className="p-2 text-xs font-bold rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-20 transition-colors"
                 >
                   <i className="fa-solid fa-chevron-right"></i>
                 </button>
@@ -136,9 +136,9 @@ export const PaginaBusca: React.FC<PaginaBuscaProps> = ({ produtos }) => {
           </div>
         </div>
       ) : (
-        <div className="text-center py-20 border border-dashed border-slate-200 rounded-xl">
-          <p className="text-xs font-mono font-bold text-slate-600">Nenhum mimo correspondente em k/</p>
-          <p className="text-xs text-slate-400 mt-1">Tente simplificar os termos ou volte para a página inicial.</p>
+        <div className="text-center py-20 border border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
+          <p className="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">Nenhum mimo correspondente em k/</p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Tente simplificar os termos ou volte para a página inicial.</p>
         </div>
       )}
     </div>

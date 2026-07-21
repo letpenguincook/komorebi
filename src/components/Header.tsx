@@ -29,25 +29,25 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white border-b border-[#F1F5F9] sticky top-0 z-50 backdrop-blur-md bg-opacity-95 px-6">
+    <header className="bg-white dark:bg-slate-950 border-b border-[#F1F5F9] dark:border-slate-800 sticky top-0 z-50 backdrop-blur-md bg-opacity-95 dark:bg-opacity-90 px-6">
       <div className="max-w-6xl mx-auto py-4 flex flex-col sm:flex-row gap-4 justify-between items-center">
-        
+
         <div className="text-center sm:text-left cursor-pointer" onClick={() => navigate('/')}>
-          <h1 className="text-lg font-bold tracking-widest uppercase text-[#0F172A]">Komorebi</h1>
+          <h1 className="text-lg font-bold tracking-widest uppercase text-[#0F172A] dark:text-white">Komorebi</h1>
           <p className="text-[10px] text-[#94A3B8] tracking-wider uppercase font-mono mt-0.5">Artesanatos personalizados</p>
         </div>
 
         {!ocultarBuscaGlobal ? (
           <div className="relative w-full sm:max-w-xs animate-fadeIn">
-            <input 
-              type="text" 
-              placeholder="Explorar produtos, tags, mimos... (Enter)" 
+            <input
+              type="text"
+              placeholder="Explorar produtos, tags, mimos... (Enter)"
               value={textoBusca}
               onChange={(e) => setTextoBusca(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="w-full pl-9 pr-4 py-2 bg-[#FAFAFA] border border-[#E2E8F0] rounded-xl text-xs text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#0284C7]/15 focus:border-[#0284C7] focus:bg-white transition"
+              className="w-full pl-9 pr-4 py-2 bg-[#FAFAFA] dark:bg-slate-900 border border-[#E2E8F0] dark:border-slate-700 rounded-xl text-xs text-[#0F172A] dark:text-white placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#0284C7]/15 focus:border-[#0284C7] dark:focus:bg-slate-800 transition"
             />
-            <i 
+            <i
               className="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-[#94A3B8] text-[11px] cursor-pointer"
               onClick={() => textoBusca.trim() && navigate(`/busca?q=${encodeURIComponent(textoBusca.trim())}`)}
             ></i>
@@ -56,15 +56,18 @@ export const Header: React.FC = () => {
           <div className="hidden sm:block flex-1" />
         )}
 
-        <nav className="flex items-center gap-6 text-xs font-medium tracking-wide text-[#64748B]">
-          <button onClick={() => navigate('/')} className="hover:text-[#0284C7] transition">
+        <nav className="flex items-center gap-6 text-xs font-medium tracking-wide text-[#64748B] dark:text-[#94A3B8]">
+          <button
+            onClick={() => navigate('/')}
+            className="hover:text-[#0284C7] dark:hover:text-blue-400 transition"
+          >
             Início
           </button>
-          <a 
-            href="https://shopee.com.br/9o5s3cf4xu#product_list" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="hover:text-[#0F172A] transition flex items-center gap-1"
+          <a
+            href="https://shopee.com.br/9o5s3cf4xu#product_list"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-[#0F172A] dark:hover:text-white transition flex items-center gap-1"
           >
             Shopee <i className="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70"></i>
           </a>
