@@ -94,10 +94,10 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-xs font-bold text-amber-900 dark:text-amber-300 tracking-tight">
-                    Código não localizado
+                    Ops, não achamos esse código!
                   </h4>
                   <p className="text-[11px] text-amber-800/80 dark:text-amber-400/90 leading-relaxed">
-                    Não achamos esse ID exato. Verifique erros de digitação ou busque o nome do produto na barra superior!
+                    Tem certeza que esse é o código? Dá uma conferida lá no vídeo ou post e tenta de novo.
                   </p>
                 </div>
               </div>
