@@ -16,7 +16,7 @@ const ConteudoApp: React.FC = () => {
     <div className="bg-white text-[#334155] font-sans antialiased min-h-screen flex flex-col selection:bg-[#0284C7]/10 selection:text-[#0284C7]">
       <Header />
 
-     <main className="flex-grow pb-16 md:pb-28">
+      <main className="flex-grow pb-16 md:pb-28">
         <Routes>
 
           <Route path="/" element={
@@ -78,7 +78,7 @@ const ValidadorDeUniverso: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/komorebi">
       <ConteudoApp />
     </BrowserRouter>
   );
